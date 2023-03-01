@@ -7,17 +7,27 @@ public class Robot {
     private int age;
     private float money;
 
+    /**
+     *
+     */
     public static final String[] STD_MOVES = {"rock", "paper", "scissor"};
 
+    /**
+     *
+     */
     public Robot(){
         this.name = "AI";
         this.age = 0;
         this.money = 1000000;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getMove() {
         Random rand = new Random();
-        int moveInt = 1 + rand.nextInt(3);
+        int moveInt = rand.nextInt(3);
         return STD_MOVES[moveInt];
     }
 
